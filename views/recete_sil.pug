@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+	h1 Reçete Sil
+	form(action="/recete_sil" method="post")
+		label(for="recete_id") Reçete ID 
+		input(type="text" id="recete_id" name="recete_id")
+		input(type="submit" value="Sil")

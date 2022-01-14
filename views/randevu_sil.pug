@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+	h1 Randevu Sil
+	form(action="/randevu_sil" method="post")
+		label(for="randevu_id") Randevu ID
+		input(type="text" id="randevu_id" name="randevu_id")
+		input(type="submit" value="Sil")

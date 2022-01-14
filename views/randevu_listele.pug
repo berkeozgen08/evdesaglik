@@ -1,0 +1,21 @@
+extends layout.pug
+
+block content
+	h1 Randevuları Listele
+	if result
+		table
+			thead
+				th Randevu ID
+				th Hasta TC
+				th Doktor TC
+				th Tarih
+			tbody
+				for randevu in result
+					tr
+						td= randevu.randevu_id
+						td= randevu.hasta_tc
+						td= randevu.doktor_tc
+						td.tarih= randevu.tarih
+		script.
+			document.querySelectorAll(".tarih").forEach(i =>
+				i.innerText = new Date(Date.parse(i.innerText)).toLocaleString());

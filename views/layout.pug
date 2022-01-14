@@ -1,0 +1,87 @@
+html
+	head
+		title Evde Sağlık
+		style.
+			* {
+				box-sizing: border-box;
+				margin: 8px;
+				font-family: Arial;
+			}
+			tr {
+				outline: 3px solid black;
+			}
+			td, th {
+				padding: 8px;
+				border-right: 3px solid black;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+			}
+			.error {
+				color: red;
+				font-size: 2rem;
+			}
+	body
+		.error= error
+		.nav
+			a(href="/hasta_listele")
+				button Hastaları Listele
+			a(href="/doktor_listele")
+				button Doktorları Listele
+			a(href="/recete_listele")
+				button Reçeteleri Listele
+			a(href="/muayene_listele")
+				button Muayeneleri Listele
+			a(href="/randevu_listele")
+				button Randevuları Listele
+			br
+			a(href="/hasta_ekle")
+				button Hasta Ekle
+			a(href="/doktor_ekle")
+				button Doktor Ekle
+			a(href="/recete_ekle")
+				button Reçete Ekle
+			a(href="/muayene_ekle")
+				button Muayene Ekle
+			a(href="/randevu_ekle")
+				button Randevu Ekle
+			br
+			a(href="/hasta_guncelle")
+				button Hasta Güncelle
+			a(href="/doktor_guncelle")
+				button Doktor Güncelle
+			a(href="/recete_guncelle")
+				button Reçete Güncelle
+			a(href="/muayene_guncelle")
+				button Muayene Güncelle
+			a(href="/randevu_guncelle")
+				button Randevu Güncelle
+			br
+			a(href="/hasta_sil")
+				button Hasta Sil
+			a(href="/doktor_sil")
+				button Doktor Sil
+			a(href="/recete_sil")
+				button Reçete Sil
+			a(href="/muayene_sil")
+				button Muayene Sil
+			a(href="/randevu_sil")
+				button Randevu Sil
+			br
+			a(href="/doktor_randevulari")
+				button Doktor Randevuları
+			a(href="/kullanicilari_listele")
+				button Kullanıcıları Listele
+			a(href="/birden_fazla_hastaya_bakan_doktorlari_listele")
+				button Birden Fazla Hastaya Bakan Doktorları Listele
+			br
+			a(href="/tamamlanmis_randevulari_goster")
+				button Tamamlanmış Randevuları Göster
+			a(href="/hasta_randevulari")
+				button Hasta Randevuları
+			a(href="/kullanici_ara")
+				button Kullanıcıları Ara
+			a(href="/hastanin_recetelerini_listele")
+				button Hastanın Reçetelerini Listele
+		block content

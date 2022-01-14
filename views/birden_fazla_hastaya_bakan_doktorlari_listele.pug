@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+	h1 Birden Fazla Hastaya Bakan Doktorları Listele 
+	if result
+		table
+			thead
+				th TC
+				th İsim
+				th Soyisim
+				th Hasta Sayısı
+			tbody
+				for doktor in result
+					tr
+						td= doktor.doktor_tc
+						td= doktor.isim
+						td= doktor.soyisim
+						td= doktor.hasta_sayisi

@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+	h1 Muayeneleri Listele
+	if result
+		table
+			thead
+				th Muayene ID
+				th Randevu ID
+				th Şikayet
+				th Teşhis
+			tbody
+				for muayene in result
+					tr
+						td= muayene.muayene_id
+						td= muayene.randevu_id
+						td= muayene.sikayet
+						td= muayene.teshis

@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+	h1 Tamamlanmış Randevuları Göster
+	if result
+		table
+			thead
+				th Randevu ID
+				th Hasta TC
+				th Doktor TC
+				th Tarih
+				th Şikayet
+				th Teşhis
+			tbody
+				for randevu in result
+					tr
+						td= randevu.randevu_id
+						td= randevu.hasta_tc
+						td= randevu.doktor_tc
+						td.tarih= randevu.tarih
+						td= randevu.sikayet
+						td= randevu.teshis
+		script.
+			document.querySelectorAll(".tarih").forEach(i =>
+				i.innerText = new Date(Date.parse(i.innerText)).toLocaleString());

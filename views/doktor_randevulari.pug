@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+	h1 Doktor Randevuları
+	form(action="/doktor_randevulari" method="post")
+		label(for="tc") TC
+		input(type="text" id="tc" name="tc")
+		input(type="submit" value="Bul")
+	if result
+		table
+			thead
+				th Hasta TC
+				th İsim
+				th Soyisim
+				th Cinsiyet
+				th Adres
+				th Doğum Tarihi
+				th tarih
+			tbody
+				for randevu in result
+					tr
+						td= randevu.tc
+						td= randevu.isim
+						td= randevu.soyisim
+						td= randevu.cinsiyet
+						td= randevu.adres
+						td.dogum_tarihi= randevu.dogum_tarihi
+						td.tarih= randevu.tarih
+		script.
+			document.querySelectorAll(".dogum_tarihi").forEach(i =>
+				i.innerText = new Date(Date.parse(i.innerText)).toLocaleDateString());
+			document.querySelectorAll(".tarih").forEach(i =>
+				i.innerText = new Date(Date.parse(i.innerText)).toLocaleString());

@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+	h1 Hastaları Listele
+	if result
+		table
+			thead
+				th TC
+				th İsim
+				th Soyisim
+				th Cinsiyet
+				th Adres
+				th Doğum Tarihi
+			tbody
+				for hasta in result
+					tr
+						td= hasta.tc
+						td= hasta.isim
+						td= hasta.soyisim
+						td= hasta.cinsiyet
+						td= hasta.adres
+						td.dogum_tarihi= hasta.dogum_tarihi
+		script.
+			document.querySelectorAll(".dogum_tarihi").forEach(i =>
+				i.innerText = new Date(Date.parse(i.innerText)).toLocaleDateString());

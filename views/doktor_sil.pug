@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+	h1 Doktor Sil
+	form(action="/doktor_sil" method="post")
+		label(for="tc") TC
+		input(type="text" id="tc" name="tc")
+		input(type="submit" value="Sil")

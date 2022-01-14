@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+	h1 Reçete Ekle
+	form(action="/recete_ekle" method="post")
+		label(for="hasta_tc") Hasta TC
+		input(type="text" id="hasta_tc" name="hasta_tc")
+		label(for="doktor_tc") Doktor TC
+		input(type="text" id="doktor_tc" name="doktor_tc")
+		label(for="ilac") İlaç
+		input(type="text" id="ilac" name="ilac")
+		label(for="verilen_tarih") Verilen Tarih
+		input(type="text" id="verilen_tarih" name="verilen_tarih" placeholder="aa-gg-yyyy")
+		label(for="bitis_tarih") Bitiş Tarih
+		input(type="text" id="bitis_tarih" name="bitis_tarih" placeholder="aa-gg-yyyy")
+		input(type="submit" value="Ekle")

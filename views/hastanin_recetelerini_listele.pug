@@ -1,0 +1,29 @@
+extends layout.pug
+
+block content
+	h1 Hastanın Reçetelerini Listele
+	form(action="/hastanin_recetelerini_listele" method="post")
+		label(for="tc") TC
+		input(type="text" id="tc" name="tc")
+		input(type="submit" value="Bul")
+	if result
+		table
+			thead
+				th TC
+				th İsim
+				th Soyisim
+				th İlaç
+				th Verilen Tarih
+				th Bitiş Tarih
+			tbody
+				for recete in result
+					tr
+						td= recete.tc
+						td= recete.isim
+						td= recete.soyisim
+						td= recete.ilac
+						td.verilen_tarih= recete.verilen_tarih
+						td.bitis_tarih= recete.bitis_tarih
+		script.
+			document.querySelectorAll(".verilen_tarih, .bitis_tarih").forEach(i =>
+				i.innerText = new Date(Date.parse(i.innerText)).toLocaleDateString());

@@ -1,0 +1,20 @@
+extends layout.pug
+
+block content
+	h1 Kullanıcıları Listele
+	if result
+		table
+			thead
+				th TC
+				th İsim
+				th Soyisim
+				th Cinsiyet
+				th Rol
+			tbody
+				for kullanici in result
+					tr
+						td= kullanici.tc
+						td= kullanici.isim
+						td= kullanici.soyisim
+						td= kullanici.cinsiyet
+						td= kullanici.rol

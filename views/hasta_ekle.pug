@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+	h1 Hasta Ekle
+	form(action="/hasta_ekle" method="post")
+		label(for="tc") TC
+		input(type="text" id="tc" name="tc")
+		label(for="isim") İsim
+		input(type="text" id="isim" name="isim")
+		label(for="soyisim") Soyisim
+		input(type="text" id="soyisim" name="soyisim")
+		label(for="cinsiyet") Cinsiyet
+		input(type="text" id="cinsiyet" name="cinsiyet" placeholder="E-K")
+		label(for="adres") Adres
+		input(type="text" id="adres" name="adres")
+		label(for="dogum_tarihi") Doğum Tarihi
+		input(type="text" id="dogum_tarihi" name="dogum_tarihi" placeholder="aa-gg-yyyy")
+		input(type="submit" value="Ekle")

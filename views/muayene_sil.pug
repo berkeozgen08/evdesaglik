@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+	h1 Muayene Sil
+	form(action="/muayene_sil" method="post")
+		label(for="muayene_id") Muayene ID
+		input(type="text" id="muayene_id" name="muayene_id")
+		input(type="submit" value="Sil")

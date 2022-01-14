@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+	h1 Doktorları Listele
+	if result
+		table
+			thead
+				th TC
+				th İsim
+				th Soyisim
+				th Cinsiyet
+				th Alan
+				th Ünvan
+			tbody
+				for doktor in result
+					tr
+						td= doktor.tc
+						td= doktor.isim
+						td= doktor.soyisim
+						td= doktor.cinsiyet
+						td= doktor.alan
+						td= doktor.unvan

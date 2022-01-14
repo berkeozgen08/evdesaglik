@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+	h1 Muayene Güncelle
+	form(action="/muayene_guncelle" method="post")
+		label(for="randevu_id") Randevu ID
+		input(type="text" id="randevu_id" name="randevu_id")
+		label(for="sikayet") Şikayet
+		input(type="text" id="sikayet" name="sikayet")
+		label(for="teshis") Teşhis
+		input(type="text" id="teshis" name="teshis")
+		input(type="submit" value="Güncelle")

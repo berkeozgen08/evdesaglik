@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+	h1 Doktor Ekle
+	form(action="/doktor_ekle" method="post")
+		label(for="tc") TC
+		input(type="text" id="tc" name="tc")
+		label(for="isim") İsim
+		input(type="text" id="isim" name="isim")
+		label(for="soyisim") Soyisim
+		input(type="text" id="soyisim" name="soyisim")
+		label(for="cinsiyet") Cinsiyet
+		input(type="text" id="cinsiyet" name="cinsiyet" placeholder="E-K")
+		label(for="alan") Alan
+		input(type="text" id="alan" name="alan")
+		label(for="unvan") Ünvan
+		input(type="text" id="unvan" name="unvan")
+		input(type="submit" value="Ekle")

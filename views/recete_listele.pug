@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+	h1 Reçeteleri Listele
+	if result
+		table
+			thead
+				th Reçete ID
+				th Hasta TC
+				th Doktor TC
+				th İlaç
+				th Verilen Tarih
+				th Bitiş Tarih
+			tbody
+				for recete in result
+					tr
+						td= recete.recete_id
+						td= recete.hasta_tc
+						td= recete.doktor_tc
+						td= recete.ilac
+						td.verilen_tarih= recete.verilen_tarih
+						td.bitis_tarih= recete.bitis_tarih
+		script.
+			document.querySelectorAll(".verilen_tarih, .bitis_tarih").forEach(i =>
+				i.innerText = new Date(Date.parse(i.innerText)).toLocaleDateString());

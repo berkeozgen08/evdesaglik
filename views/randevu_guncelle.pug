@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+	h1 Randevu Güncelle
+	form(action="/randevu_guncelle" method="post")
+		label(for="randevu_id") Randevu ID
+		input(type="text" id="randevu_id" name="randevu_id")
+		label(for="hasta_tc") Hasta TC
+		input(type="text" id="hasta_tc" name="hasta_tc")
+		label(for="doktor_tc") Doktor TC
+		input(type="text" id="doktor_tc" name="doktor_tc")
+		label(for="tarih") Tarih
+		input(type="text" id="tarih" name="tarih")
+		input(type="submit" value="Güncelle")
